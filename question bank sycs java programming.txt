@@ -1,0 +1,286 @@
+1. Java Tokens and Data Types
+
+Program:
+public class DataTypes {
+    public static void main(String[] args) {
+        int age = 20;
+        double marks = 85.5;
+        char grade = 'A';
+        boolean pass = true;
+        String name = "Rahul";
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Marks: " + marks);
+        System.out.println("Grade: " + grade);
+        System.out.println("Pass: " + pass);
+    }
+}
+
+
+Output:
+
+Name: Rahul
+Age: 20
+Marks: 85.5
+Grade: A
+Pass: true
+
+----------------------------------------------------------------------
+2. Arithmetic Operations Using Operators
+
+Program:
+public class Arithmetic {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 5;
+
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+    }
+}
+
+
+Output:
+
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+
+---------------------------------------------------------------------
+3. Class and Object to Display Student Details
+
+Program:
+class Student {
+    int rollNo = 101;
+    String name = "Rahul";
+    double marks = 80.5;
+
+    void display() {
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + marks);
+    }
+}
+
+public class StudentDemo {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+
+
+Output:
+
+Roll No: 101
+Name: Rahul
+Marks: 80.5
+---------------------------------------------------------------------
+
+4. Constructor
+
+Program:
+class Student {
+    String name;
+    int age;
+
+    Student() {
+        name = "Rahul";
+        age = 20;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+public class ConstructorDemo {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+
+
+Output:
+
+Name: Rahul
+Age: 20
+-------------------------------------------------------------------------
+Practical 5: Static Keyword in Java
+
+program:
+class Student {
+    static String college = "Sheth M K College";
+    String name = "Rahul";
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("College: " + college);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+
+
+output:
+
+Name: Rahul
+College: Sheth M K College
+
+-----------------------------------------------------------------------------
+6. Method Overloading
+
+Program:
+public class Overloading {
+    void add(int a, int b) {
+        System.out.println("Sum: " + (a + b));
+    }
+
+    void add(int a, int b, int c) {
+        System.out.println("Sum: " + (a + b + c));
+    }
+
+    public static void main(String[] args) {
+        Overloading obj = new Overloading();
+        obj.add(10, 20);
+        obj.add(10, 20, 30);
+    }
+}
+
+
+
+Output:
+
+Sum: 30
+Sum: 60
+
+-------------------------------------------------------------------------------
+7. Method Overriding
+
+Program:
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}
+
+
+Output:
+
+Dog barks
+
+------------------------------------------------------------------------------
+8. Encapsulation Using Private Data Members
+
+Program:
+class Student {
+    private int age = 20;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+
+        s.setAge(21);
+
+        System.out.println("Age: " + s.getAge());
+    }
+}
+
+Output:
+
+Age: 21
+------------------------------------------------------------------------------
+
+9. Abstraction Using an Abstract Class
+
+Program:
+aabstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a Circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        c.draw();
+    }
+}
+
+
+Output:
+
+Drawing a Circle
+---------------------------------------------------------------------------
+
+10. Access Specifiers in Java
+
+Program:
+class Student {
+    public int a = 10;
+    private int b = 20;
+    protected int c = 30;
+    int d = 40;
+
+    void display() {
+        System.out.println("Public: " + a);
+        System.out.println("Private: " + b);
+        System.out.println("Protected: " + c);
+        System.out.println("Default: " + d);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+
+
+Output:
+
+Public: 10
+Private: 20
+Protected: 30
+Default: 40
